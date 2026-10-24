@@ -1,0 +1,47 @@
+.profile-editor { max-width: 780px; margin: 0 auto; }
+.profile-optional-note { margin: -12px 0 28px; color: #786675; font-size: 12px; line-height: 1.7; }
+.profile-section { margin: 20px 0; padding: 20px; border: 1px solid #e5dce2; border-radius: 20px; background: #fffdf9; }
+.profile-section-heading { display: flex; gap: 13px; align-items: flex-start; margin-bottom: 16px; }
+.profile-step { display: grid; place-items: center; width: 28px; height: 28px; flex: 0 0 28px; border-radius: 50%; background: #f2eaf2; color: #78536b; font-size: 9px; letter-spacing: .5px; }
+.profile-section h2 { margin: 0 0 5px; font-size: 22px; }
+.profile-section h2 span { color: #786675; font-family: inherit; font-size: 13px; }
+.profile-section-heading p { margin: 0; color: #786675; font-size: 12px; line-height: 1.7; }
+.profile-search-label { display: block; margin: 16px 0 8px; font-size: 12px; }
+.profile-section input { height: 48px; margin: 0; background: #fff; }
+.selected-perfumes, .profile-perfume-results { list-style: none; padding: 0; margin: 0; }
+.selected-perfumes { display: flex; flex-wrap: wrap; gap: 8px; }
+.selected-perfumes li { display: flex; align-items: center; gap: 7px; padding: 6px 8px 6px 10px; border: 1px solid #d6c3d0; border-radius: 24px; background: #f2eaf2; color: #654b60; font-size: 11px; }
+.selected-perfumes button { display: grid; place-items: center; width: 22px; height: 22px; padding: 0; border: 0; border-radius: 50%; background: #fffdf9; color: #78536b; font-size: 17px; line-height: 1; }
+.profile-perfume-results { display: grid; grid-template-columns: 1fr; gap: 8px; max-height: 280px; margin-top: 10px; overflow: auto; overscroll-behavior: contain; }
+.profile-perfume-results button { width: 100%; min-height: 58px; display: flex; align-items: center; gap: 10px; padding: 6px; border: 1px solid #e5dce2; border-radius: 12px; background: #fffdfa; text-align: left; color: #493c46; }
+.profile-perfume-results button[aria-pressed='true'] { border-color: #a58096; background: #f2eaf2; }
+.profile-perfume-results img { width: 42px; height: 42px; border: 1px solid #e5dce2; border-radius: 9px; object-fit: cover; background: #f4edf1; }
+.profile-perfume-results button > span:nth-child(2) { display: flex; flex: 1; flex-direction: column; gap: 3px; min-width: 0; }
+.profile-perfume-results small { color: #786675; font-size: 9px; letter-spacing: .8px; text-transform: uppercase; }
+.profile-perfume-results strong { font: 16px/1.2 Georgia, serif; }
+.profile-choice-indicator { display: grid; place-items: center; width: 22px; height: 22px; border: 1px solid #cbbac5; border-radius: 50%; color: #78536b; font-size: 15px; }
+.profile-perfume-results button[aria-pressed='true'] .profile-choice-indicator { border-color: #876277; background: #876277; color: #fff; }
+.profile-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.profile-chips button { min-height: 34px; padding: 6px 11px; border: 1px solid #e4d7e2; border-radius: 30px; background: #f2eaf2; color: #654b60; font-size: 12px; line-height: 1.4; text-transform: capitalize; }
+.profile-chips button[aria-pressed='true'] { border-color: #876277; background: #876277; color: #fff; }
+.profile-family-chips button { background: #fffdfa; }
+.profile-actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 28px 0 12px; }
+.profile-actions .primary-button { max-width: 280px; margin: 0; }
+.home-dashboard { max-width: 1000px; margin: 16px auto 0; }
+.inspiration-section, .recommendations-section { margin-top: 44px; }
+.inspiration-section h2, .recommendations-section h2 { margin: 0 0 8px; }
+.inspiration-grid, .recommendation-grid { margin-top: 22px; }
+.inspiration-link { margin-top: 18px; }
+.profile-dashboard-heading { max-width: 720px; }
+.profile-dashboard-heading h1 { margin-bottom: 14px; }
+.profile-summary { max-width: 650px; margin: 0 0 12px; color: #654b60; font: 20px/1.55 Georgia, serif; }
+.profile-guidance { max-width: 760px; margin: 24px 0 36px; padding: 13px 15px; border: 1px solid #e4d7e2; border-radius: 14px; background: #f4edf1; color: #786675; font-size: 12px; line-height: 1.7; }
+.recommendation-reason { display: block; min-height: 42px; margin: 0 0 8px; color: #654b60; font-size: 11px; line-height: 1.55; }
+.suggestion-card .card-concentration { margin-bottom: 10px; }
+.suggestion-card .card-link { margin-top: auto; }
+.profile-reset { max-width: 760px; margin: 48px 0 4px; padding: 20px 0 0; border-top: 1px solid #e5dce2; }
+.profile-reset h2 { margin: 0 0 7px; font-size: 20px; }
+.profile-reset p { max-width: 580px; margin: 0 0 10px; color: #786675; font-size: 12px; line-height: 1.7; }
+.profile-reset-button { color: #8a4560; }
+@media (min-width: 600px) { .profile-section { padding: 24px; } .profile-perfume-results { grid-template-columns: repeat(2, minmax(0, 1fr)); } .inspiration-grid, .recommendation-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 400px) { .profile-section { padding: 16px; } .profile-actions { align-items: stretch; flex-direction: column-reverse; } .profile-actions .primary-button { max-width: none; } }

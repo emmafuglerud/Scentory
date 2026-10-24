@@ -1,0 +1,84 @@
+/* Mobile layout first; the desktop layout is at the bottom. */
+.app-shell {
+  min-height: 100svh;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(ellipse at 10% 20%, #f0e6ed, transparent 50%), radial-gradient(ellipse at 95% 90%, #f4e5de, transparent 50%);
+}
+.welcome-card {
+  width: 100%;
+  max-width: 1040px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #fffdf9;
+  border: 1px solid #fff;
+  box-shadow: 0 20px 80px #66525c0c;
+}
+.brand-panel {
+  padding: 25px 28px;
+  background: linear-gradient(145deg, #f2e3e7, #e9e1ef);
+  overflow: hidden;
+}
+.wordmark { display: flex; align-items: center; gap: 8px; font: 32px Georgia, serif; letter-spacing: -1.5px; color: #59424f; }
+.wordmark span { color: #917449; font-size: 24px; }
+.brand-story { text-align: center; }
+.eyebrow { font-size: 10px; line-height: 1.6; letter-spacing: 2px; font-weight: 600; color: #786473; }
+.brand-story .eyebrow, .brand-caption, .brand-footer { display: none; }
+.brand-title { margin: 20px 0 0; font: 30px/1.18 Georgia, serif; letter-spacing: -.7px; }
+.brand-title br { display: none; }
+.brand-title em { color: #97637c; font-weight: 400; }
+
+/* Small perfume illustration made from simple shapes. */
+.bottle-scene { position: relative; width: 170px; height: 160px; margin: 15px auto 0; }
+.bottle-cap { position: absolute; width: 45px; height: 25px; left: 63px; top: 6px; z-index: 2; border-radius: 5px 5px 2px 2px; background: repeating-linear-gradient(90deg, #b99a67 0 2px, #d6be92 3px 5px); border: 1px solid #ab8b58; }
+.bottle-neck { position: absolute; width: 28px; height: 17px; left: 71px; top: 30px; background: #d9b77f; }
+.bottle { position: absolute; width: 104px; height: 104px; left: 33px; top: 44px; border: 2px solid #ffffffad; outline: 1px solid #c2a0aa66; border-radius: 17px 17px 12px 12px; background: linear-gradient(115deg, #fff9, #fff1 22%, #deb0bb77 60%, #fff8); box-shadow: inset 5px 0 6px #fff6, inset -4px -6px 10px #b9829c33, 5px 10px 20px #8c62781a; display: grid; place-items: center; }
+.bottle-label { width: 74px; height: 64px; border: 1px solid #b59c7366; background: #fff9efeb; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #7a5b68; }
+.bottle-label span { font: italic 32px Georgia, serif; }
+.bottle-label small { font-size: 5px; letter-spacing: 1px; margin-top: 4px; }
+.bottle-shadow { position: absolute; bottom: 0; left: 24px; width: 125px; height: 8px; border-radius: 50%; background: #96687a23; filter: blur(5px); }
+.sparkle { position: absolute; color: #a58a58; font-size: 29px; }
+.sparkle-one { top: 20px; left: 8px; }
+.sparkle-two { top: 85px; right: 4px; font-size: 20px; }
+
+/* Shared form and Home styles. */
+.content-panel { padding: 30px 25px 22px; }
+.form-content { width: 100%; max-width: 350px; margin: auto; }
+.flower-mark { display: none; color: #a68c60; font-size: 34px; margin-bottom: 20px; }
+h1 { margin: 8px 0 12px; font: 32px/1.15 Georgia, serif; letter-spacing: -.9px; }
+h1:focus { outline: none; }
+.intro { color: #7c6a76; font-size: 14px; line-height: 1.6; margin: 0 0 28px; }
+form { display: flex; flex-direction: column; }
+label { font-size: 12px; font-weight: 600; margin-bottom: 9px; }
+input { width: 100%; height: 49px; border: 1px solid #e2d9dd; border-radius: 10px; padding: 0 14px; background: #fffdfa; color: #493c46; font-size: 16px; margin-bottom: 20px; }
+input::placeholder { color: #91838b; font-size: 14px; }
+input:focus { border-color: #a58096; }
+.primary-button { display: flex; align-items: center; justify-content: center; gap: 16px; width: 100%; min-height: 50px; border: 1px solid #876277; border-radius: 10px; background: #876277; color: #fff; font-size: 14px; font-weight: 500; margin-top: 6px; }
+.primary-button:hover { background: #725064; }
+.primary-button span { font-size: 19px; }
+.switch-screen { text-align: center; font-size: 12px; color: #7c6a76; margin: 21px 0 26px; }
+.text-button { color: #78536b; font-weight: 600; background: transparent; border: 0; min-height: 44px; padding: 10px 4px; text-decoration: underline; text-underline-offset: 4px; }
+.text-button:hover { color: #493c46; }
+.demo-note { font-size: 10px; line-height: 1.8; color: #80717b; text-align: center; margin: 24px 0 0; }
+.content-footer { text-align: center; color: #89775f; font-size: 8px; letter-spacing: 1.8px; margin: 30px 0 0; }
+.home-note { text-align: center; padding: 25px 20px; margin-bottom: 28px; background: #f4eef4; border: 1px solid #e8dfe9; border-radius: 16px; }
+.home-note > span { color: #9b7e4d; font-size: 32px; }
+.home-note h2 { font: 23px Georgia, serif; margin: 12px 0; }
+.home-note p { font-size: 13px; line-height: 1.8; color: #786675; margin: 0; }
+
+@media (min-width: 760px) {
+  .app-shell { padding: 48px 32px; }
+  .welcome-card { display: grid; grid-template-columns: 46% 54%; min-height: 690px; }
+  .brand-panel { padding: 36px 38px; display: flex; flex-direction: column; justify-content: space-between; }
+  .brand-story .eyebrow, .brand-caption, .brand-footer { display: block; }
+  .brand-title { font-size: 46px; margin: 20px 0 28px; }
+  .brand-title br { display: block; }
+  .bottle-scene { transform: scale(1.4); margin: 52px auto 40px; }
+  .brand-caption { font: italic 16px Georgia, serif; color: #7d6776; margin: 35px 0 25px; }
+  .brand-footer { text-align: center; font-size: 8px; letter-spacing: 2px; color: #7d6776; }
+  .content-panel { display: flex; flex-direction: column; justify-content: center; padding: 48px 40px 26px; }
+  .flower-mark { display: block; }
+  h1 { font-size: 38px; }
+  .content-footer { margin-top: 40px; }
+}

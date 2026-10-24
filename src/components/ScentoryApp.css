@@ -1,0 +1,115 @@
+/* Only the screens after login use these styles. */
+.scentory-app { min-height: 100svh; background: radial-gradient(ellipse at top right, #f2e8f0, transparent 55%), #faf7f3; }
+.library-header { background: #fffdf9e8; border-bottom: 1px solid #e8dfe3; }
+/* Equal side columns center the whole wordmark, regardless of either side's content. */
+.library-header-inner { max-width: 1120px; margin: auto; padding: 22px 20px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 8px; }
+.library-motto { min-width: 0; justify-self: end; font-size: 8px; letter-spacing: 1.5px; color: #89775f; text-align: right; line-height: 1.8; }
+.header-menu { position: relative; justify-self: start; }
+.menu-toggle, .modal-close { width: 44px; height: 44px; padding: 10px; display: grid; place-items: center; color: #78536b; background: transparent; border: 1px solid transparent; border-radius: 12px; }
+.menu-toggle:hover, .modal-close:hover { background: #f1e5ec; border-color: #e4d7e2; }
+.menu-toggle svg, .modal-close svg { width: 22px; height: 22px; }
+.account-menu { position: absolute; top: calc(100% + 8px); left: 0; z-index: 20; min-width: 160px; padding: 6px; border: 1px solid #e5dce2; border-radius: 14px; background: #fffdf9; box-shadow: 0 8px 28px #493c4614; }
+.account-menu button { width: 100%; min-height: 44px; padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border: 0; border-radius: 9px; color: #78536b; background: transparent; font-size: 13px; }
+.account-menu button:hover { background: #f4eef4; }
+.library-main { max-width: 1120px; margin: auto; padding: 30px 20px calc(120px + env(safe-area-inset-bottom)); }
+.library-main h1 { max-width: 700px; font-size: clamp(32px, 6vw, 48px); line-height: 1.15; }
+.library-main h2 { font: 26px/1.3 Georgia, serif; font-weight: normal; }
+.library-intro { font-size: 14px; line-height: 1.8; color: #786675; max-width: 460px; margin: 0 0 26px; }
+.library-edition { display: none; }
+.search-area { max-width: 520px; }
+.search-area label { display: block; margin-bottom: 10px; }
+.search-area input { background: #fffdf9; margin: 0; height: 52px; }
+.results-count { font-size: 12px; color: #786675; margin: 22px 0 16px; }
+
+/* Two cards fit comfortably on small phones, with more columns as space grows. */
+.perfume-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; list-style: none; padding: 0; margin: 0; }
+.perfume-grid li { min-width: 0; }
+.perfume-card { width: 100%; height: 100%; display: flex; flex-direction: column; padding: 0; text-align: left; background: #fffdf9; border: 1px solid #e5dce2; border-radius: 18px; color: #493c46; overflow: hidden; }
+.perfume-card:hover { border-color: #aa8299; box-shadow: 0 6px 20px #87627712; }
+.card-image { display: block; width: 100%; background: #f4edf1; border-bottom: 1px solid #eee5e8; }
+.card-image img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
+.card-copy { padding: 15px 12px 13px; display: flex; flex-direction: column; flex: 1; width: 100%; overflow-wrap: anywhere; }
+.card-brand { font-size: 9px; letter-spacing: 1px; line-height: 1.6; text-transform: uppercase; color: #786675; }
+.card-name { font: 20px/1.25 Georgia, serif; margin: 7px 0 8px; }
+.card-concentration { color: #786675; font-size: 10px; line-height: 1.5; margin-bottom: 18px; }
+.card-link { display: flex; justify-content: space-between; gap: 6px; align-items: center; padding-top: 12px; border-top: 1px solid #eee5e8; font-size: 10px; color: #78536b; margin-top: auto; }
+.card-link > span { font-size: 17px; }
+.search-empty { padding: 40px 20px; background: #fffdf9; border: 1px solid #e5dce2; border-radius: 20px; text-align: center; }
+.search-empty > span { font-size: 32px; color: #a68c60; }
+.search-empty h2 { margin: 12px 0; }
+.search-empty p { color: #786675; font-size: 14px; }
+
+/* Navigation stays within reach and leaves room for the phone's safe area. */
+.bottom-nav { position: fixed; z-index: 10; bottom: 0; left: 0; right: 0; display: flex; padding: 8px 12px calc(8px + env(safe-area-inset-bottom)); border: 1px solid #e5dce2; border-bottom: 0; border-radius: 22px 22px 0 0; background: #fffdf9f5; box-shadow: 0 -4px 24px #493c4608; }
+.bottom-nav button { flex: 1; min-width: 0; min-height: 58px; border: 0; border-radius: 12px; background: transparent; color: #786675; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; font-size: 11px; }
+.bottom-nav svg { width: 21px; height: 21px; }
+.bottom-nav button[aria-current='page'] { color: #78536b; background: #f1e5ec; font-weight: 600; }
+.bottom-nav button:hover { background: #f4eef4; }
+
+.library-home { max-width: 900px; margin: 16px auto 0; }
+.library-home .home-note { text-align: left; margin: 22px 0; }
+.library-home .primary-button { max-width: 350px; }
+.home-illustration { display: none; }
+.collection-placeholder { max-width: 520px; margin: 16px auto 0; }
+.collection-placeholder .home-note { margin-top: 30px; }
+.collection-placeholder .home-note p { font-size: 14px; }
+
+/* Compact perfume information card. These styles only affect modal content. */
+.perfume-modal { width: calc(100% - 24px); max-width: 500px; max-height: 85vh; max-height: 85dvh; padding: 0; margin: auto; overflow: auto; overscroll-behavior: contain; border: 1px solid #e5dce2; border-radius: 24px; background: #fffdf9; color: #493c46; box-shadow: 0 20px 80px #493c4626; }
+.perfume-modal::backdrop { background: #493c461f; }
+/* Keep the close control reachable without adding an empty row above the title. */
+.modal-toolbar { position: sticky; top: 0; z-index: 1; height: 0; }
+.perfume-modal .modal-close { position: absolute; top: 8px; right: 8px; background: #fffdf9f5; }
+.perfume-modal .modal-close:hover { background: #f1e5ec; }
+.modal-content { padding: 20px 18px 18px; }
+.detail-header { padding-right: 36px; margin-bottom: 16px; }
+.detail-header .eyebrow { margin: 0 0 5px; font-size: 9px; }
+.perfume-modal h1 { margin: 0 0 6px; font-size: clamp(26px, 4vw, 32px); line-height: 1.15; overflow-wrap: anywhere; }
+.detail-concentration { color: #786675; font-size: 12px; margin: 0; line-height: 1.6; }
+.perfume-details { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+/* Image and facts share a compact row; notes occupy the full width below. */
+.perfume-summary { min-width: 0; display: grid; grid-template-columns: 110px minmax(0, 1fr); align-items: center; gap: 16px; }
+.detail-illustration { min-width: 0; margin: 0; text-align: center; }
+.detail-illustration img { display: block; width: 110px; max-width: 100%; height: auto; margin: auto; border-radius: 18px; border: 1px solid #e5dce2; }
+.detail-illustration figcaption { max-width: 170px; margin: 6px auto 0; font-size: 9px; line-height: 1.5; color: #786675; }
+.perfume-facts { min-width: 0; margin: 0; display: grid; gap: 8px; padding: 0; }
+.perfume-facts dt { font-size: 10px; color: #786675; margin-bottom: 3px; }
+.perfume-facts dd { margin: 0; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+.family-value { text-transform: capitalize; }
+.fragrance-notes { min-width: 0; }
+.perfume-modal .fragrance-notes h2 { font: 22px/1.3 Georgia, serif; font-weight: normal; margin: 0 0 10px; }
+.fragrance-notes h3 { font-size: 11px; font-weight: 600; margin: 10px 0 6px; }
+.note-list { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; }
+.note-list li { max-width: 100%; overflow-wrap: anywhere; border: 1px solid #e4d7e2; border-radius: 30px; background: #f2eaf2; padding: 4px 9px; font-size: 11px; line-height: 1.5; text-transform: capitalize; }
+.unavailable { color: #786675; font-size: 12px; line-height: 1.6; margin: 0; }
+.notes-caption { font-size: 10px; line-height: 1.5; color: #786675; margin: 6px 0 0; }
+.detail-footer { border-top: 1px solid #e5dce2; margin-top: 14px; padding-top: 14px; }
+.collection-action .primary-button { min-height: 46px; margin: 0; font-size: 13px; gap: 9px; }
+.collection-action .primary-button > span { font-size: 21px; font-weight: normal; }
+.collection-action .primary-button svg { width: 18px; height: 18px; }
+.collection-action p { text-align: center; font-size: 10px; line-height: 1.6; color: #786675; margin: 7px 0 0; }
+.price-caption { text-align: center; font-size: 10px; line-height: 1.6; color: #786675; margin: 8px 0 0; }
+
+@media (max-width: 359px) {
+  .modal-content { padding-inline: 16px; }
+  .perfume-summary { grid-template-columns: 90px minmax(0, 1fr); gap: 12px; }
+  .detail-illustration img { width: 90px; }
+}
+
+@media (min-width: 600px) {
+  .library-header-inner { padding: 24px 32px; }
+  .library-main { padding: 42px 32px 140px; }
+  .perfume-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 18px; }
+  .card-copy { padding: 20px 18px 16px; }
+  .card-name { font-size: 23px; }
+  .card-brand, .card-concentration, .card-link { font-size: 11px; }
+  .bottom-nav { max-width: 430px; bottom: 20px; left: 20px; right: 20px; margin: auto; padding: 8px 12px; border: 1px solid #e5dce2; border-radius: 22px; box-shadow: 0 6px 32px #493c4614; }
+}
+@media (min-width: 900px) {
+  .discover-heading { display: flex; align-items: center; justify-content: space-between; gap: 36px; }
+  .library-edition { display: flex; align-items: center; gap: 16px; font-size: 9px; letter-spacing: 1.5px; color: #89775f; }
+  .library-edition span { font-size: 30px; }
+  .perfume-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .library-home { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 60px; }
+  .home-illustration { display: block; width: 100%; border-radius: 28px; }
+}

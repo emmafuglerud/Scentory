@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="480" viewBox="0 0 400 480">
+  <title>Perfume illustration placeholder</title>
+  <desc>An original generic perfume bottle on a soft cream background, not a product photo.</desc>
+  <rect width="400" height="480" rx="28" fill="#faf7f3"/>
+  <circle cx="200" cy="232" r="140" fill="#eee5ef"/>
+  <ellipse cx="200" cy="385" rx="88" ry="10" fill="#e5d9df"/>
+  <rect x="173" y="108" width="54" height="46" rx="8" fill="#bea579"/>
+  <rect x="182" y="154" width="36" height="27" fill="#d5c3a2"/>
+  <rect x="123" y="177" width="154" height="195" rx="28" fill="#edd4df" stroke="#c6a7b7" stroke-width="2"/>
+  <path d="M139 205v137" stroke="#fffdf9" stroke-width="7" stroke-linecap="round" opacity=".6"/>
+  <rect x="147" y="232" width="106" height="86" rx="3" fill="#fffdf9" stroke="#bea579"/>
+  <path d="M200 250l5 17 17 5-17 5-5 17-5-17-17-5 17-5z" fill="#a77d95"/>
+  <path d="M298 126l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" fill="#bea579"/>
+</svg>
