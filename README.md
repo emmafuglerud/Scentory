@@ -1,3 +1,13 @@
+**Personal note**
+In this assignment I have chosen alternative 1A: Solve an everyday problem. I had an idea to create a perfume application where users can choose a perfume or scent they like and get recommendations for other scents they may enjoy based of the fragrance notes and scent families in the perfumes they choose. I also wanted users to be able to make a collections of the perfumes they own, want to buy or do not like. 
+
+To get started I brainstormed this idea with ChatGPT, and decided the key features would be a home page, discover page, collection page and a scent profile. The scent profile is the key feature in my eyes, as that was the main thing I wanted from the app. I created a moodboard with pictures from Pinterest to show ChatGPT the visual aesthetic I wanted in the application, and it made a few illustrations based off of my descriptions. Eventually we agreed on the design and moved forward to coding. 
+
+I decided to use Visual Studio Code as I am somewhat familiar with that from previous assignments. I installed the Codex extension and used that for vibe coding. 
+
+**
+The following is a data guide created by Codex, explaining both the technical aspects of the application and its current features.** 
+
 # Scentory
 
 A mobile-first perfume discovery app, built step by step for a university assignment with React, Vite, and plain CSS.
