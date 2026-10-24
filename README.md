@@ -10,7 +10,7 @@ The following is a data guide created by Codex, explaining both the technical as
 
 # Scentory
 
-A mobile-first perfume discovery app, built step by step for a university assignment with React, Vite, and plain CSS.
+A mobile-sized perfume discovery demo, built step by step for a university assignment with React, Vite, and plain CSS.
 
 ## Run locally
 
@@ -51,16 +51,16 @@ The forms only switch screens. Leave fields empty or enter made-up details. The 
 - `src/components/CollectionIcon.jsx`: shared lightweight outline SVG icons.
 - `src/components/Collection.css`: collection page and editor styles.
 - `src/data/collection.js`: category/rating choices, storage validation, and reading/writing localStorage.
-- `src/components/ScentoryApp.css`: responsive styles for screens after login.
+- `src/components/ScentoryApp.css`: fixed mobile-width styles for screens after login.
 - `src/data/perfumes.js`: the single perfume database, imported by the app.
 - `src/index.css`: shared base styles.
 - `src/main.jsx`: React entry point.
 
 ## Discover and perfume details
 
-After logging in, use the bottom bar to move between Home, Discover, and Collection. Discover displays the 25 entries from the existing database in a grid: two columns on phones, three on wider screens, and four on desktop. Search updates as you type, ignores letter case and extra spaces at the ends, and matches either perfume name or brand.
+After logging in, use the bottom bar to move between Home, Discover, and Collection. Discover displays the 25 synthetic demo entries in a two-column mobile grid at every viewport width. Search updates as you type, ignores letter case and extra spaces at the ends, and matches either perfume name or brand.
 
-Select a card to open its details in a modal over Discover. Close it with the X, Escape, or a click outside. Discover stays mounted underneath, retaining the search, filtered cards, and scroll position. Empty note tiers and other missing data display an unavailable message. Verified notes without an assigned tier are shown separately. Prices are labelled as approximate NOK prices for the listed bottle size, with the retailer and check date.
+Select a card to open its details in a modal over Discover. Close it with the X, Escape, or a click outside. Discover stays mounted underneath, retaining the search, filtered cards, and scroll position. Empty note tiers and other missing data display an unavailable message. Notes without an assigned tier are shown separately. Prices are fictional NOK values for the listed demo bottle size and use a sample-catalogue label.
 
 The modal uses the browser's native `dialog.showModal()` to keep keyboard focus inside and prevent interaction with the background. Focus starts on the close button and returns to the selected card on dismissal. The modal scrolls independently on small screens.
 
@@ -91,13 +91,13 @@ This is **local demo data, shared across demo logins in the same browser**, not 
 
 1. Run `npm run dev`, open the printed Local URL, and submit the login form (empty fields are fine).
 2. Open Discover: it should show 25 perfumes.
-3. Search for `Dior` (brand) or `Cloud` (name), then open a matching card.
+3. Search for `Aster` (brand) or `Velvet` (name), then open a matching card.
 4. Check the notes, bottle size, and approximate NOK price. Open Add to Collection, try saving without a category, then choose a category and optional rating and save. Reopen Edit Collection and check the choices. Cancel edits with X, Escape, or an outside click; check that only the editor closes. Close the details dialog and verify the Discover search and scroll remain.
-5. Try an unmatched search, then Clear search. Open Pure Musc to see unavailable top/base note messages.
+5. Try an unmatched search, then Clear search. Open White Veil to see unavailable top/base note messages.
 6. Check the header menu on Home, Discover, and Collection. Use Tab and Enter to reach/open it, Escape to dismiss it, and Log out to return to login. Check that signup also reaches Home.
 7. Use a narrow browser window or your browser's mobile device preview to check the centered logo, wrapping motto, scrolling modal, and unchanged bottom navigation. In the modal, Tab and Shift+Tab should keep focus within the dialog.
 8. On My Collection, check category counts, filtering, saved rating labels, editing, and removing perfumes. Move a perfume to a different category and confirm its count changes. Refresh, log in again, and check that saved entries remain. Select a Not for me category with a Love it rating to check their independence. Clear a rating by selecting it again.
 
 Automated DOM interaction checks during implementation covered collection saves/updates/removal, required categories, optional/clearable independent ratings, counts/filters, persistence across app remount and logout/login, duplicate prevention, storage failures/corrupt data, nested dialog dismissal/focus/scroll locks, existing navigation/search, and missing-data fallbacks. The checks used native-dialog lifecycle shims because the DOM test environment does not implement the browser's top layer. Native focus trapping, Escape-to-cancel behavior, and visual responsiveness still need a real browser check; browser preview was unavailable in the development session.
 
-Recommendations and a backend have not been implemented.
+The profile and recommendations are local, rule-based demo features. There is no backend.

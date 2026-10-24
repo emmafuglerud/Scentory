@@ -1,4 +1,4 @@
-.profile-editor { max-width: 780px; margin: 0 auto; }
+.profile-editor { margin: 0 auto; }
 .profile-optional-note { margin: -12px 0 28px; color: #786675; font-size: 12px; line-height: 1.7; }
 .profile-section { margin: 20px 0; padding: 20px; border: 1px solid #e5dce2; border-radius: 20px; background: #fffdf9; }
 .profile-section-heading { display: flex; gap: 13px; align-items: flex-start; margin-bottom: 16px; }
@@ -27,7 +27,7 @@
 .profile-family-chips button { background: #fffdfa; }
 .profile-actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 28px 0 12px; }
 .profile-actions .primary-button { max-width: 280px; margin: 0; }
-.home-dashboard { max-width: 1000px; margin: 16px auto 0; }
+.home-dashboard { margin: 16px auto 0; }
 .inspiration-section, .recommendations-section { margin-top: 44px; }
 .inspiration-section h2, .recommendations-section h2 { margin: 0 0 8px; }
 .inspiration-grid, .recommendation-grid { margin-top: 22px; }
@@ -39,9 +39,8 @@
 .recommendation-reason { display: block; min-height: 42px; margin: 0 0 8px; color: #654b60; font-size: 11px; line-height: 1.55; }
 .suggestion-card .card-concentration { margin-bottom: 10px; }
 .suggestion-card .card-link { margin-top: auto; }
-.profile-reset { max-width: 760px; margin: 48px 0 4px; padding: 20px 0 0; border-top: 1px solid #e5dce2; }
+.profile-reset { margin: 48px 0 4px; padding: 20px 0 0; border-top: 1px solid #e5dce2; }
 .profile-reset h2 { margin: 0 0 7px; font-size: 20px; }
 .profile-reset p { max-width: 580px; margin: 0 0 10px; color: #786675; font-size: 12px; line-height: 1.7; }
 .profile-reset-button { color: #8a4560; }
-@media (min-width: 600px) { .profile-section { padding: 24px; } .profile-perfume-results { grid-template-columns: repeat(2, minmax(0, 1fr)); } .inspiration-grid, .recommendation-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 400px) { .profile-section { padding: 16px; } .profile-actions { align-items: stretch; flex-direction: column-reverse; } .profile-actions .primary-button { max-width: none; } }

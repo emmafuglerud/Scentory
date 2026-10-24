@@ -1,6 +1,8 @@
-/* Mobile layout first; the desktop layout is at the bottom. */
+/* The login remains a phone-sized experience at every viewport width. */
 .app-shell {
+  width: min(100%, 430px);
   min-height: 100svh;
+  margin: 0 auto;
   padding: 20px;
   display: grid;
   place-items: center;
@@ -8,7 +10,7 @@
 }
 .welcome-card {
   width: 100%;
-  max-width: 1040px;
+  max-width: none;
   overflow: hidden;
   border-radius: 28px;
   background: #fffdf9;
@@ -67,18 +69,6 @@ input:focus { border-color: #a58096; }
 .home-note h2 { font: 23px Georgia, serif; margin: 12px 0; }
 .home-note p { font-size: 13px; line-height: 1.8; color: #786675; margin: 0; }
 
-@media (min-width: 760px) {
-  .app-shell { padding: 48px 32px; }
-  .welcome-card { display: grid; grid-template-columns: 46% 54%; min-height: 690px; }
-  .brand-panel { padding: 36px 38px; display: flex; flex-direction: column; justify-content: space-between; }
-  .brand-story .eyebrow, .brand-caption, .brand-footer { display: block; }
-  .brand-title { font-size: 46px; margin: 20px 0 28px; }
-  .brand-title br { display: block; }
-  .bottle-scene { transform: scale(1.4); margin: 52px auto 40px; }
-  .brand-caption { font: italic 16px Georgia, serif; color: #7d6776; margin: 35px 0 25px; }
-  .brand-footer { text-align: center; font-size: 8px; letter-spacing: 2px; color: #7d6776; }
-  .content-panel { display: flex; flex-direction: column; justify-content: center; padding: 48px 40px 26px; }
-  .flower-mark { display: block; }
-  h1 { font-size: 38px; }
-  .content-footer { margin-top: 40px; }
+@media (min-width: 480px) {
+  .app-shell { border-inline: 1px solid #e8dfe3; box-shadow: 0 0 42px #493c4612; }
 }

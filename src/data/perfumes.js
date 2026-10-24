@@ -1,11 +1,10 @@
-// Local research data, not a backend. Import later with:
+// Synthetic demo catalogue, not a backend. Import later with:
 // import { perfumes } from './data/perfumes'
 // Notes use lowercase English names. See README.md in this folder for conventions.
 // [] / '' / null mean unverified or unavailable, not that a note is absent.
-// Each price is an approximate NOK snapshot for bottleSizeMl, excluding shipping.
-// checkedAt applies to all sources in that record. No automatic price updates.
+// All names, brands, retailers, and prices shown in the app are fictional demo data.
 
-export const perfumes = [
+const researchPerfumes = [
   {
     id: 'ysl-libre-edp',
     brand: 'Yves Saint Laurent',
@@ -557,3 +556,46 @@ export const perfumes = [
     researchNote: 'Tiers follow Fredrik & Louisa’s explicit three-note pyramid. Other notes mentioned without tiers are kept separately. Floral family verified with Flaconi; price is the Norwegian 50 ml listing.',
   },
 ]
+
+const demoIdentities = [
+  ['Aster & Vale', 'Velvet Dawn', 720],
+  ['Nocturne Atelier', 'Ember Velvet', 760],
+  ['Maison Solenne', 'Midnight Orchid', 890],
+  ['Petal Theory', 'Bloom Reverie', 810],
+  ['Luma Parfums', 'Roman Glow', 690],
+  ['Belle Maison', 'Golden Iris', 730],
+  ['Orée Studio', 'Prism Flora', 780],
+  ['Meadow & Muse', 'Daylight Daisy', 640],
+  ['Riviera Notes', 'Azure Citrus', 620],
+  ['Crystal House', 'Rose Radiance', 670],
+  ['Cloudberry Atelier', 'Soft Horizon', 650],
+  ['Rowan & Bloom', 'Berry Veil', 700],
+  ['Hearth & Halo', 'Vanilla Light', 750],
+  ['Linen Library', 'Warm Morning', 560],
+  ['Coast & Cedar', 'Salted Sage', 720],
+  ['Orchard & Air', 'Pear Blossom', 720],
+  ['Nord Atelier', 'Amber Voyage', 1100],
+  ['Dune Form', 'Desert Veil', 1050],
+  ['Sunday Archive', 'Fresh Linen', 620],
+  ['Nightcap Studio', 'Velvet Lounge', 680],
+  ['Hearth Chapter', 'Fireside Pages', 700],
+  ['Pure Sillage', 'White Veil', 870],
+  ['Atlas Mist', 'Coastal Night', 620],
+  ['Iron & Ivy', 'Wild Terrain', 740],
+  ['Rose & Ink', 'Silk Petal', 780],
+]
+
+// The app receives a fictional display catalogue. Note and family fields remain generic scent descriptors.
+export const perfumes = researchPerfumes.map((perfume, index) => {
+  const [brand, name, priceNok] = demoIdentities[index]
+  return {
+    ...perfume,
+    brand,
+    name,
+    priceNok,
+    priceRetailer: 'Scentory sample catalogue',
+    sources: { notes: '', family: '', price: '' },
+    checkedAt: '2026-10-24',
+    researchNote: '',
+  }
+})
